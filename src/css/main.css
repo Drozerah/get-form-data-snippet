@@ -1,0 +1,78 @@
+body, html {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+*body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+}
+
+form h1 {
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+form label:before {
+  content: '* ';
+  color: #d50000;
+}
+
+form input {
+  margin: 10px 0px;
+  padding: 8px;
+}
+
+form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+form input[type='submit'] {
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+form input[type='submit']:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

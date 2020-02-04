@@ -1,0 +1,15 @@
+{
+  "name": "get-form-data",
+  "version": "1.0.0",
+  "description": "Simple registration form snippet",
+  "main": "app.js",
+  "bin": {
+    "form-js": "prepare.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Thomas G. aka Drozerah <drozerah@gmail.com> (https://github.com/Drozerah)",
+  "license": "ISC"
+}
