@@ -55,7 +55,7 @@ form h1 {
 
 form label:before {
   content: '* ';
-  color: #d50000;
+  color: #b71c1c;
 }
 
 form div {
@@ -113,5 +113,21 @@ form div input[type='submit'] {
 
 form div input[type='submit']:hover {
   cursor: pointer;
+}
+
+form #info {
+  display: none;
+  text-align: center;
+  padding: 8px;
+}
+
+form #info.error {
+  display: block;
+  background-color: #ef9a9a;
+}
+
+form #info.success {
+  display: block;
+  background-color: #a5d6a7;
 }
 /*# sourceMappingURL=main.css.map */

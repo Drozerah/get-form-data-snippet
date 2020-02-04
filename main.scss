@@ -39,7 +39,7 @@ form{
   }
   label:before{
     content: '* ';
-    color:#d50000;
+    color:#b71c1c;
   }
   div{
     display: flex;
@@ -77,5 +77,21 @@ form{
         cursor: pointer;
       }
     }
+  }
+
+  // Errors
+
+  #info{
+    display: none;
+    text-align: center;
+    padding: 8px;
+  }
+  #info.error{
+    display: block;
+    background-color: #ef9a9a;
+  }
+  #info.success{
+    display: block;
+    background-color: #a5d6a7;
   }
 }
