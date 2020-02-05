@@ -48,6 +48,14 @@
     passwords.forEach(element => element.type = 'password' )
   }
   /**
+  *  Get form data as Object response
+  */
+  const getFormData = (form) => {
+    return [...form.elements]
+    .filter(element => element.name !== 'submit' )
+    .reduce((acc, input) => ({...acc, [input.name]: input.value}), {})
+  }
+  /**
   * Toogle Visibility Event 
   */
   // Get password imputs
@@ -67,21 +75,21 @@
       }
       isVisibility = !isVisibility
   })
+ 
   /**
   * Submit Event 
   */
   // Get form element
   const form = document.querySelector('#registrationForm')
   // Submit event
-  form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    // Get form data as Object response
-    const formData = [...e.target.elements]
-      .filter(element => element.name !== 'submit' )
-      .reduce((acc, input) => ({...acc, [input.name]: input.value}), {})
-    // Validate passwords
-    isPasswordsConfirmed(formData)
-      .then(data => {
+  form.addEventListener('submit', async (e) => {
+    try {
+      e.preventDefault()
+      // Get form data as Object response
+      const formData = getFormData(e.target)
+      // Validate passwords
+      const data = await isPasswordsConfirmed(formData)
+      if (data) {
         // Show confirmation prompt
         confirm(JSON.stringify(data, null, 4))
         // Display success message
@@ -90,11 +98,10 @@
         resetForm(e.target)
         // Reset visibility icon
         resetVisibility()
-      })
-      .catch(err => {
-        // display err message
-        displayError(err)
-      })
+      }
+    } catch (error) {
+      // display err message
+      displayError(error)
+    }
   })
-
 })()
